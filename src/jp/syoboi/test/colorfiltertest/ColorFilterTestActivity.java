@@ -33,7 +33,7 @@ public class ColorFilterTestActivity extends Activity {
 
         ListItemAdapter adpater = new ListItemAdapter(this, items);
 
-        GridView grid = (GridView)findViewById(R.id.grid);
+        GridView grid = (GridView) findViewById(R.id.grid);
         grid.setAdapter(adpater);
     }
 
@@ -63,10 +63,10 @@ public class ColorFilterTestActivity extends Activity {
 
             ListItem i = getItem(position);
 
-            ImageView image = (ImageView)v.findViewById(R.id.image);
+            ImageView image = (ImageView) v.findViewById(R.id.image);
             image.setColorFilter(i.color, i.mode);
 
-            TextView text = (TextView)v.findViewById(R.id.text);
+            TextView text = (TextView) v.findViewById(R.id.text);
             text.setText(String.format("%08X\n%s", i.color, i.mode.toString()));
 
             return v;
