@@ -64,7 +64,7 @@ public class ColorFilterTestActivity extends Activity {
             ListItem i = getItem(position);
 
             ImageView image = (ImageView) v.findViewById(R.id.image);
-            image.setColorFilter(i.color, i.mode);
+            image.setColorFilter(i.color, i.mode);       // 结果：6 种颜色（列）* 18 种绘制策略（行）
 
             TextView text = (TextView) v.findViewById(R.id.text);
             text.setText(String.format("%08X\n%s", i.color, i.mode.toString()));
